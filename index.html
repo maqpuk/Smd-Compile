@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <link rel="icon" href="images/test.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmdCompile</title>
+    <style>
+        html {
+            background: #17171e
+        }
+    </style>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div id="app">
+
+        <main class="pages">
+            <div class="page centered">
+
+                <div class="top-menu ">
+                    <menu>
+                        <li><a target="_blank" href="https://www.youtube.com/channel/UCgkPCLfQU1wxlFo8E8EhjxQ ">Youtube</a></li>
+                        <li>
+                            <a target="_blank" href="https://vk.com/underko">VK</a>
+                        </li>
+                        <li><a target="_blank" href="https://vk.com/underko">Donate</a></li>
+                        <li><a target="_blank" href="https://developer.valvesoftware.com/wiki/Source">Source Engine</a></li>
+                    </menu>
+                </div>
+                <h1>SmdCompile</h1>
+                <h3>Конвертируй модели без проблем!</h3>
+                <img alt="image" class="images" src="images/SmdCompile_odlw7RKjhf.png ">
+
+
+                <button class="upload" onclick="window.open('https://vk.com/underko');">
+                    <span style="font-size: 20px; padding: 5px;">Купить</span>
+                </button>
+
+            </div>
+            <div class="page info">
+                <h2>Компилятор моделей</h2>
+                <p>
+                    Studiomdl — это инструмент командной строки, используемый для компиляции моделей из промежуточных форматов, экспортированных из пакетов моделирования, в двоичный формат .mdl, который считывается движком Source.. a song, artificial intelligence will separate
+                    <br>
+                    <br> SmdCompile - это визуальная обёртка Studiomdl.
+
+
+                </p>
+
+
+            </div>
+            <div class="page centered">
+                <div>
+                    <img alt="3D render " class="images padding_5" src="images/SmdCompile_Go4bZrgCls.png">
+                    <img alt="3D render " class="images padding_5" src="images/SmdCompile_z1iPprEkVu.png ">
+                    <img alt="3D render " class="images padding_5" src="images/SmdCompile_9WSU3LS782.png ">
+                </div>
+
+            </div>
+        </main>
+    </div>
+    <div id="image-viewer">
+
+        <img class="modal-content" id="full-image">
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(".images").click(function() {
+
+            let url_ = $(this).attr("src");
+            $("#full-image").attr("src", url_);
+
+            $('#image-viewer').show();
+
+
+        });
+
+        $("#image-viewer").click(function() {
+            $('#image-viewer').hide();
+        });
+    </script>
+</body>
+
+</html>
