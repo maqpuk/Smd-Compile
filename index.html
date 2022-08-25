@@ -1,90 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/logo.ico">
+	<title>SMD COMPILER</title>
 
-    <link rel="icon" href="images/test.ico">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SmdCompile</title>
-    <style>
-        html {
-            background: #17171e
-        }
-    </style>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/styles.css">
 </head>
-
 <body>
 
-    <div id="app">
+	<div class="wrapper">
+			<ul class="main-menu">
+				<li><a target="_blank" href="https://www.youtube.com/channel/UCgkPCLfQU1wxlFo8E8EhjxQ ">Youtube</a></li>
+				<li><a target="_blank" href="https://vk.com/underko">VK</a></li>
+				<li><a target="_blank" href="https://vk.com/underko">Donate</a></li>
+				<li><a target="_blank" href="https://developer.valvesoftware.com/wiki/Source">Source Engine</a></li>
+			</ul> 
+		<div class="content">
+			<ul class="text-main">
+				<div>SMD COMPILER</div>		
+			</ul>
+			<ul class="text-low">
+				<div>Конвертируй модели без проблем!</div>		
+			</ul>
+		</div>
+	</div>
+		<!-- Slideshow container -->
+<div class="slideshow-container">
 
-        <main class="pages">
-            <div class="page centered">
+	<!-- Full-width images with number and caption text -->
+	<div class="mySlides fade">	
+	  <img src="img/1.png" style="width:65%">
+	</div>
+	<div class="mySlides fade">
+	  <img src="img/2.png" style="width:65%">
+	</div>
+	<div class="mySlides fade">
+	  <img src="img/3.png" style="width:65%">
+	</div>
+	<div class="mySlides fade">
+		<img src="img/4.png" style="width:65%">
+	  </div>
+  
+	<!-- Next and previous buttons -->
+	<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+	<a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+  <br>
+  
+  <!-- The dots/circles -->
+  <div style="text-align:center">
+	<span class="dot" onclick="currentSlide(1)"></span>
+	<span class="dot" onclick="currentSlide(2)"></span>
+	<span class="dot" onclick="currentSlide(3)"></span>
+	<span class="dot" onclick="currentSlide(4)"></span>
 
-                <div class="top-menu ">
-                    <menu>
-                        <li><a target="_blank" href="https://www.youtube.com/channel/UCgkPCLfQU1wxlFo8E8EhjxQ ">Youtube</a></li>
-                        <li>
-                            <a target="_blank" href="https://vk.com/underko">VK</a>
-                        </li>
-                        <li><a target="_blank" href="https://vk.com/underko">Donate</a></li>
-                        <li><a target="_blank" href="https://developer.valvesoftware.com/wiki/Source">Source Engine</a></li>
-                    </menu>
-                </div>
-                <h1>SmdCompile</h1>
-                <h3>Конвертируй модели без проблем!</h3>
-                <img alt="image" class="images" src="images/SmdCompile_odlw7RKjhf.png ">
+	
+	<div class="buy">
+		<button class="upload" onclick="window.open('https://vk.com/underko');">
+			<span style="padding: 5px; margin-top: 45px;">Купить</span>
+		</button>
+	</div>
+
+	<div class="info" style="padding-left: 55px; padding-right: 55px; margin-bottom: 70px;">
+		<ul class="text-infohead">
+			<div>Компилятор моделей</div>		
+		</ul>
+
+		<ul class="text-info">
+		<p>
+			Studiomdl — это инструмент командной строки, используемый для компиляции моделей из промежуточных форматов, экспортированных из пакетов моделирования, в двоичный формат .mdl, который считывается движком Source.. a song, artificial intelligence will separate
+			<br>
+			<br> SmdCompile - это визуальная обёртка Studiomdl.
+		</p>
+	</ul>>
+
+	</div>
+	
+	</div>
+	
+<script>
+	let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
 
 
-                <button class="upload" onclick="window.open('https://vk.com/underko');">
-                    <span style="font-size: 20px; padding: 5px;">Купить</span>
-                </button>
 
-            </div>
-            <div class="page info">
-                <h2>Компилятор моделей</h2>
-                <p>
-                    Studiomdl — это инструмент командной строки, используемый для компиляции моделей из промежуточных форматов, экспортированных из пакетов моделирования, в двоичный формат .mdl, который считывается движком Source.. a song, artificial intelligence will separate
-                    <br>
-                    <br> SmdCompile - это визуальная обёртка Studiomdl.
+</script>
 
-
-                </p>
-
-
-            </div>
-            <div class="page centered">
-                <div>
-                    <img alt="3D render " class="images padding_5" src="images/SmdCompile_Go4bZrgCls.png">
-                    <img alt="3D render " class="images padding_5" src="images/SmdCompile_z1iPprEkVu.png ">
-                    <img alt="3D render " class="images padding_5" src="images/SmdCompile_9WSU3LS782.png ">
-                </div>
-
-            </div>
-        </main>
-    </div>
-    <div id="image-viewer">
-
-        <img class="modal-content" id="full-image">
-    </div>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        $(".images").click(function() {
-
-            let url_ = $(this).attr("src");
-            $("#full-image").attr("src", url_);
-
-            $('#image-viewer').show();
-
-
-        });
-
-        $("#image-viewer").click(function() {
-            $('#image-viewer').hide();
-        });
-    </script>
 </body>
-
 </html>
